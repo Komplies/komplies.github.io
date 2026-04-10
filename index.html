@@ -1,40 +1,371 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Jackson's portfolio</title>
-  </head>
-  <body lang="en">
-  
-  <header>
-  
-  	<h1>This is a portfolio website</h1>
-  
-  <header>
- 
-    <h2>About me</h2>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackson – Portfolio | Student @ FSS</title>
+  <meta name="description" content="Portfolio of Jackson: Communications Technology Student at FSS, exploring creative media and digital innovation." />
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (tweak colors, fonts, container width here)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#6366f1',        // Update to your preferred accent
+            surface: '#0b1220',       // Dark card surface
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+            mono: ['Source Code Pro', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          },
+          maxWidth: {
+            'content': '1040px',
+          },
+          borderRadius: {
+            xl: '14px',
+          },
+          boxShadow: {
+            glow: '0 8px 24px rgba(99, 102, 241, 0.25)',
+          }
+        }
+      },
+      darkMode: 'class'
+    };
+  </script>
+  <!-- Optional: preload Google Fonts (swap later if you prefer another font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* Smooth focus ring for accessibility */
+    :focus-visible { outline: none !important; box-shadow: 0 0 0 3px rgba(99,102,241,.35) !important; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-slate-800 text-white px-3 py-2 rounded-md">Skip to content</a>
 
-    <p>
-      Hello, my name is Jackson, and I am currently in grade 10 of high school. I'm taking Communications Technology, and in this portfolio, you will see some of my finished (or potentially unfinished) projects, which will hopefully give you a rough idea of me.
-    </p>
+  <div class="max-w-content mx-auto px-6">
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row items-center justify-between gap-4 py-6 sticky top-0 bg-slate-900/95 backdrop-blur z-50">
+      <div class="flex items-center gap-3">
+        <!-- Avatar -->
+        <img src="image/Lobotomy.jpg" alt="Jackson" class="w-10 h-10 rounded-lg ring-1 ring-slate-700 object-cover" />
+        <strong class="text-lg">Jackson</strong>
+      </div>
+      <nav class="text-slate-300 flex gap-6">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#gallery" class="hover:text-white transition">Gallery</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+    </header>
 
-    <h2>My interests</h2>
+    <main id="main">
+      <!-- Hero -->
+      <section class="grid md:grid-cols-2 gap-6 items-center py-16" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold tracking-tight">Hi, I'm Jackson</h1>
+          <p class="uppercase tracking-wider text-xs text-slate-400 mt-3">Age 16 • Communications Technology @ FSS</p>
+          <p class="text-slate-300 mt-4 text-lg leading-relaxed">
+            Passionate about exploring creative media and digital technology. I'm learning about communications, design, and bringing ideas to life through innovative projects.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="#gallery" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl shadow-glow ring-1 ring-slate-700 hover:opacity-95 transition">
+              View Gallery
+            </a>
+            <a href="#projects" class="inline-flex items-center gap-2 border border-slate-700 text-white font-semibold px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition">
+              Projects
+            </a>
+          </div>
+        </div>
+        <div>
+          <img src="image/Lobotomy.jpg" class="w-full h-80 object-cover rounded-xl ring-1 ring-slate-700 bg-surface" />
+        </div>
+      </section>
 
-    <p>
-      Some of my interests may show up in my work, some of these interests include things like
-      <ul>
-        <li>Music</li>
-        <li>Art</li>
-        <li>Soccer/Football</li>
-        <li>Games</li>
-        <li>Film</li>
-        <li>Reading</li>
-        <li>Anime</li>
-        <li>And more</li>
-      </ul>
-    </p>
+      <!-- About -->
+      <section id="about" class="py-16" aria-labelledby="about-title">
+        <div class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-8">
+          <h2 id="about-title" class="text-3xl font-semibold mb-4">About</h2>
+          <p class="text-slate-300 text-lg leading-relaxed mb-4">
+            I'm a 16-year-old student attending communications technology at FSS. My passion lies in exploring the intersection of technology and creative expression. Through my studies and personal projects, I'm developing skills in digital design, media production, and innovative technology solutions.
+          </p>
+          <p class="text-slate-300 text-lg leading-relaxed">
+            I believe in collaborative learning and enjoy taking on new challenges that push my creativity and technical abilities. Whether it's through multimedia projects, design work, or exploring emerging technologies, I'm committed to continuous growth and making meaningful contributions.
+          </p>
+        </div>
+      </section>
 
-    <h2>My works</h2>
+      <!-- Gallery -->
+      <section id="gallery" class="py-16" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="text-3xl font-semibold mb-8">Gallery</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery Item 1 -->
+          <article class="group bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+            <div class="overflow-hidden h-64">
+              <img src="image/Weezer.png" alt="Creative piece - Weezer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-lg">Creative Expression</h3>
+              <p class="text-slate-400 text-sm mt-2">Exploring artistic vision through digital media</p>
+            </div>
+          </article>
 
+          <!-- Gallery Item 2 -->
+          <article class="group bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+            <div class="overflow-hidden h-64">
+              <img src="image/Kirby.png" alt="Personal artwork - Kirby" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-lg">Digital Art</h3>
+              <p class="text-slate-400 text-sm mt-2">Creative work showcasing design skills</p>
+            </div>
+          </article>
 
-  </body>
+          <!-- Gallery Item 3 -->
+          <article class="group bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+            <div class="overflow-hidden h-64">
+              <img src="image/Lobotomy.jpg" alt="Creative project - Lobotomy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-lg">Media Work</h3>
+              <p class="text-slate-400 text-sm mt-2">Exploring multimedia possibilities</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="py-16" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="text-3xl font-semibold mb-8">Projects</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project Card 1 -->
+          <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6 hover:ring-accent transition">
+            <div class="mb-4">
+              <div class="w-full h-40 rounded-lg ring-1 ring-slate-700 bg-gradient-to-br from-accent/20 to-blue-500/20 flex items-center justify-center">
+                <span class="text-slate-400">Portfolio Website</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold">Personal Portfolio</h3>
+            <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">HTML • CSS • Tailwind</p>
+            <p class="text-slate-300 mt-3">Building a professional portfolio website to showcase my work, skills, and creative projects in communications technology.</p>
+            <p class="mt-4 text-sm">
+              <a href="#" class="text-accent hover:underline">View</a>
+            </p>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6 hover:ring-accent transition">
+            <div class="mb-4">
+              <div class="w-full h-40 rounded-lg ring-1 ring-slate-700 bg-gradient-to-br from-accent/20 to-blue-500/20 flex items-center justify-center">
+                <span class="text-slate-400">Communications Tech</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold">Communications Studies</h3>
+            <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Media • Technology • Learning</p>
+            <p class="text-slate-300 mt-3">Pursuing communications technology at FSS, learning about media production, digital tools, and technology applications.</p>
+            <p class="mt-4 text-sm">
+              <a href="#" class="text-accent hover:underline">Learn More</a>
+            </p>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6 hover:ring-accent transition">
+            <div class="mb-4">
+              <div class="w-full h-40 rounded-lg ring-1 ring-slate-700 bg-gradient-to-br from-accent/20 to-blue-500/20 flex items-center justify-center">
+                <span class="text-slate-400">Creative Works</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold">Creative Projects</h3>
+            <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Design • Art • Innovation</p>
+            <p class="text-slate-300 mt-3">Exploring creative possibilities through digital design, multimedia work, and innovative technology applications in art.</p>
+            <p class="mt-4 text-sm">
+              <a href="#gallery" class="text-accent hover:underline">View Gallery</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-16" aria-labelledby="contact-title">
+        <div class="bg-gradient-to-r from-accent/10 to-blue-500/10 ring-1 ring-accent/20 rounded-xl p-10 text-center">
+          <h2 id="contact-title" class="text-3xl font-semibold mb-4">Get In Touch</h2>
+          <p class="text-slate-300 mb-8 text-lg">Feel free to reach out to discuss projects or opportunities!</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:jackson@example.com" class="px-6 py-3 rounded-xl border border-accent bg-accent/10 text-white hover:bg-accent/20 transition font-medium">
+              Email Me
+            </a>
+            <a href="#" class="px-6 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white hover:bg-slate-700 transition font-medium">
+              Social Links
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-10 text-center text-slate-400 border-t border-slate-700">
+        <p>© <span id="year"></span> Jackson. Built with Tailwind CSS.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-6 items-center py-10" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title" class="text-4xl md:text-5xl font-extrabold tracking-tight">Hi, I’m Jackson</h1>
+        <p class="uppercase tracking-wider text-xs text-slate-400 mt-3">Grade 10 • Student Developer / Maker</p>
+        <p class="text-slate-300 mt-4">
+          One‑line intro about what you love to build or learn. Keep it punchy and specific.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="#projects" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-4 py-2 rounded-xl shadow-glow ring-1 ring-slate-700 hover:opacity-95">
+            See Projects
+          </a>
+          <a href="resume.pdf" class="inline-flex items-center gap-2 border border-slate-700 text-white font-semibold px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700">
+            Resume
+          </a>
+        </div>
+      </div>
+      <div>
+        <img src="images/Lobotomy.jpg" alt="Hero image or project collage" class="w-full h-64 md:h-72 object-cover rounded-xl ring-1 ring-slate-700 bg-surface" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-6" aria-labelledby="about-title">
+      <div class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6">
+        <h2 id="about-title" class="text-2xl font-semibold mb-2">About</h2>
+        <p class="text-slate-300">
+          Write a short bio: your interests, what you’re learning, and what you’re aiming to build next.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-6" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="text-2xl font-semibold mb-4">Projects</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Project Card -->
+        <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-4">
+          <img src="project-1.jpg" alt="Screenshot of Project One" class="w-full h-40 object-cover rounded-lg ring-1 ring-slate-700 mb-3">
+          <h3 class="text-lg font-semibold">Project One</h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">HTML • CSS • JS</p>
+          <p class="text-slate-300 mt-2">1–2 sentence description of what it does and why it’s cool.</p>
+          <p class="mt-3 text-sm">
+            <a href="#" class="text-accent hover:underline">Live Demo</a>
+            <span class="mx-2 text-slate-500">•</span>
+            <a href="#" class="text-accent hover:underline">Source</a>
+          </p>
+        </article>
+
+        <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-4">
+          <img src="project-2.jpg" alt="Screenshot of Project Two" class="w-full h-40 object-cover rounded-lg ring-1 ring-slate-700 mb-3">
+          <h3 class="text-lg font-semibold">Project Two</h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Python • Flask</p>
+          <p class="text-slate-300 mt-2">Brief description of the problem and your approach.</p>
+          <p class="mt-3 text-sm">
+            <a href="#" class="text-accent hover:underline">Live Demo</a>
+            <span class="mx-2 text-slate-500">•</span>
+            <a href="#" class="text-accent hover:underline">Source</a>
+          </p>
+        </article>
+
+        <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-4">
+          <img src="project-3.jpg" alt="Screenshot of Project Three" class="w-full h-40 object-cover rounded-lg ring-1 ring-slate-700 mb-3">
+          <h3 class="text-lg font-semibold">Project Three</h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Arduino • C++</p>
+          <p class="text-slate-300 mt-2">Short explanation of what you learned or measured impact.</p>
+          <p class="mt-3 text-sm">
+            <a href="#" class="text-accent hover:underline">Live Demo</a>
+            <span class="mx-2 text-slate-500">•</span>
+            <a href="#" class="text-accent hover:underline">Source</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-6" aria-labelledby="skills-title">
+      <div class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6">
+        <h2 id="skills-title" class="text-2xl font-semibold mb-2">Skills</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">HTML</span>
+          <span class="px-3 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">CSS</span>
+          <span class="px-3 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">JavaScript</span>
+          <span class="px-3 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">Python</span>
+          <span class="px-3 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Activities -->
+    <section id="experience" class="py-6" aria-labelledby="exp-title">
+      <h2 id="exp-title" class="text-2xl font-semibold mb-4">Experience & Activities</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-5">
+          <h3 class="text-lg font-semibold">Role @ Club/Organization</h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400">Dates • City</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-slate-300">
+            <li>Impactful bullet with metric or outcome.</li>
+            <li>What you built, led, or learned.</li>
+          </ul>
+        </article>
+        <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-5">
+          <h3 class="text-lg font-semibold">Event / Competition</h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400">Date • Result</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-slate-300">
+            <li>Highlight, award, or project outcome.</li>
+            <li>Collaboration or leadership note.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-6" aria-labelledby="contact-title">
+      <div class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl p-6">
+        <h2 id="contact-title" class="text-2xl font-semibold mb-2">Contact</h2>
+        <p class="text-slate-300">Feel free to reach out!</p>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a href="mailto:you@example.com" class="px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800">you@example.com</a>
+          <a href="https://github.com/yourhandle" class="px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourhandle" class="px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-slate-400">
+      © <span id="year"></span> Your Name • Built with Tailwind CSS
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optional: auto dark mode based on system preference (default is already dark)
+    // If you want auto: add/remove 'dark' on <html> based on media query:
+    // const media = window.matchMedia('(prefers-color-scheme: dark)');
+    // document.documentElement.classList.toggle('dark', media.matches);
+  </script>
+</body>
 </html>
