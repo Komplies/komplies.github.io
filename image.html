@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackson – Video Portfolio | Student @ FSS</title>
+  <meta name="description" content="Video portfolio of Jackson: Communications Technology Student at FSS, showcasing video editing and production work." />
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (tweak colors, fonts, container width here)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#6366f1',        // Update to your preferred accent
+            surface: '#0b1220',       // Dark card surface
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+            mono: ['Source Code Pro', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          },
+          maxWidth: {
+            'content': '1040px',
+          },
+          borderRadius: {
+            xl: '14px',
+          },
+          boxShadow: {
+            glow: '0 8px 24px rgba(99, 102, 241, 0.25)',
+          }
+        }
+      },
+      darkMode: 'class'
+    };
+  </script>
+  <!-- Optional: preload Google Fonts (swap later if you prefer another font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* Smooth focus ring for accessibility */
+    :focus-visible { outline: none !important; box-shadow: 0 0 0 3px rgba(99,102,241,.35) !important; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+  <a href="index.html" class="fixed top-4 left-4 text-white text-xl hover:text-accent transition">&larr; Back</a>
+  <a onclick="showModal()" class="fixed top-2.5 left-[95px] inline-flex items-center gap-2 border border-slate-700 text-white font-semibold px-4 py-2 rounded-xl bg-slate-800 hover:bg-accent hover:shadow-glow transition cursor-pointer">Projects</a>
 
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-slate-800 p-6 rounded-xl max-w-md w-full mx-4">
+      <h3 class="text-xl font-semibold mb-4 text-white">Choose a Gallery</h3>
+      <ul class="space-y-2">
+        <li><a href="audio.html" class="block text-accent hover:underline">Audio</a></li>
+        <li><a href="image.html" class="block text-accent hover:underline">Image</a></li>
+        <li><a href="video.html" class="block text-accent hover:underline">Video</a></li>
+      </ul>
+      <button onclick="closeModal()" class="mt-4 bg-accent text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <!-- Image Gallery -->
+  <section class="py-16 px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-center">Image Portfolio</h2>
+    <div class="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <!-- Image 1 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Tyler.png" alt="Tyler" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Tyler.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Flower Boy+</h3>
+          <p class="text-slate-400 text-sm mt-2">This is the first image I edited using photopea. The assignment was to add objects and shapes into exsisting media, I added a halo and some rain to Tyler, the Creator's Flower Boy.</p>
+        </div>
+      </article>
+
+      <!-- Image 2 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Timely.png" alt="Timely" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Timely.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Timely, no Anri</h3>
+          <p class="text-slate-400 text-sm mt-2">This was my second assignment, where I had to remove something from an already exsisting album cover. I chose to remove Anri from her album Timely!! however the removal tool didn't work that well and it looks a little eerie now.</p>
+        </div>
+      </article>
+
+      <!-- Image 3 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Weezer.png" alt="Weezer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Weezer.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Aiden & Weezer</h3>
+          <p class="text-slate-400 text-sm mt-2">This wasn't a project however I thought it would be funny to remove Matthew Sharp from Weezer's Blue Album and replace him with my friend Aiden and it turned out pretty well.</p>
+        </div>
+      </article>
+
+      <!-- Image 4 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Frieren.png" alt="Frieren" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Frieren.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Frieren x Demon Days poster</h3>
+          <p class="text-slate-400 text-sm mt-2">This was my third assignment, where I was tasked with combining two different medias into one poster/album cover. I chose to take the album cover of Gorillaz' Demon Days and replace the members of the band with the members of the Hero Party from Frieren: Beyond Journey's End.</p>
+        </div>
+      </article>
+
+      <!-- Image 5 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Kirby.png" alt="Kirby" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Kirby.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Kirby x Currents album cover</h3>
+          <p class="text-slate-400 text-sm mt-2">This is also a part of my third assignment, since I finished early I decided to make a second image. I took the album cover of Currents by Tame Impala and replaced the metal ball with Kirby.</p>
+        </div>
+      </article>
+
+      <!-- Image 6 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Zleepy1.png" alt="Zleepy1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Zleepy1.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Zleepy text logo</h3>
+          <p class="text-slate-400 text-sm mt-2">This is part of my fourth assignment, where I was tasked with creating three different logos for a fictional company that I created. This is the text version of the logo for Zleepy, which is a pillow/bedding company.</p>
+        </div>
+      </article>
+
+      <!-- Image 7 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Zleepy2.png" alt="Zleepy2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Zleepy2.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Zleepy image logo</h3>
+          <p class="text-slate-400 text-sm mt-2">This is part of my fourth assignment, where I was tasked with creating three different logos for a fictional company that I created. This is the image version of the logo for Zleepy, which is a pillow/bedding company.</p>
+        </div>
+      </article>
+
+      <!-- Image 8 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Zleepy3.png" alt="Zleepy3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Zleepy3.png')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Zleepy image + text logo</h3>
+          <p class="text-slate-400 text-sm mt-2">This is part of my fourth assignment, where I was tasked with creating three different logos for a fictional company that I created. This is the combined version of the logo for Zleepy, which is a pillow/bedding company.</p>
+        </div>
+      </article>
+
+      <!-- Image 9 -->
+      <article class="bg-slate-800/60 ring-1 ring-slate-700 rounded-xl overflow-hidden hover:ring-accent transition">
+        <div class="overflow-hidden h-64">
+          <img src="image/Lobotomy.jpg" alt="Lobotomy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer" onclick="openLightbox('image/Lobotomy.jpg')">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Me</h3>
+          <p class="text-slate-400 text-sm mt-2">This is me.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+    <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75">&times;</button>
+    <img id="lightbox-img" src="" alt="Enlarged image" class="max-w-3xl max-h-[80vh] object-contain">
+  </div>
+
+  <script>
+    // Modal functions
+    function showModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    // Lightbox functions
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
